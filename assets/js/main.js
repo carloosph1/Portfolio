@@ -139,6 +139,7 @@ const contactForm = document.getElementById('contact-form'),
     contactMessage = document.getElementById('contact-message'),
     message = document.getElementById('message');
 
+    
 const sendEmail = (e) => {
     e.preventDefault();
 
