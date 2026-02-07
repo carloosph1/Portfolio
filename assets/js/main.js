@@ -80,6 +80,7 @@ gsap.utils.toArray('.text-gradient').forEach((span) => {
     });
 
 });
+
 /*==================== DARK LIGHT TEMA ====================*/
 window.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('theme-toggle');
@@ -123,7 +124,7 @@ var mixer = mixitup('.work-container', {
 /* Active work */
 const linkWork = document.querySelectorAll('.work-item');
 function activeWork() {
-    linkWork.forWach((a) => {
+    linkWork.forEach((a) => {
         a.classList.remove('active-work');
     });
     this.classList.add('active-work');
