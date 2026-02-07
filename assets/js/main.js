@@ -87,24 +87,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function applyTheme(theme) {
         if (theme === 'light') {
-            document.body.classList.add('light-theme');
-            toggleBtn.classList.remove('ri-sun-line');
-            toggleBtn.classList.add('ri-moon-line');
-
-        } else {
             document.body.classList.remove('light-theme');
             toggleBtn.classList.add('ri-sun-line');
             toggleBtn.classList.remove('ri-moon-line');
+           
+
+        } else {
+             document.body.classList.add('light-theme');
+            toggleBtn.classList.remove('ri-sun-line');
+            toggleBtn.classList.add('ri-moon-line');
+            
         }
 
         localStorage.setItem('theme', theme);
     }
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 
     toggleBtn.addEventListener('click', () => {
         const isLight = document.body.classList.contains('light-theme');
-        applyTheme(isLight ? 'dark' : 'light');
+        applyTheme(isLight ? 'light' : 'dark'); 
     });
 });
 
